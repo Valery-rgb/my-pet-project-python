@@ -20,17 +20,20 @@ def divide(num1, num2):
     return num1 / num2
 
 
-num1 = float(input("Enter first number: "))
-operation = input("Choose operation: ")
-num2 = float(input("Enter second number: "))
+try:
+    num1 = float(input("Enter first number: "))
+    operation = input("Choose operation :")
+    num2 = float(input("Enter a second number: "))
 
-if operation == "+":
-    print(f"{num1}+{num2}={add(num1, num2)}")
-elif operation == "-":
-    print(f"{num1}-{num2}={subtract(num1, num2)}")
-elif operation == "*":
-    print(f"{num1}*{num2}={multiply(num1, num2)}")
-elif operation == "/":
-    print(f"{num1}/{num2}={divide(num1, num2)}")
-else:
-    print("Invalid operation")
+    if operation == "+":
+        print(f"{num1}+{num2}={add(num1, num2)}")
+    elif operation == "-":
+        print(f"{num1}-{num2}={subtract(num1, num2)}")
+    elif operation == "*":
+        print(f"{num1}*{num2}={multiply(num1, num2)}")
+    elif operation == "/":
+        print(f"{num1}/{num2}={divide(num1, num2)}")
+    else:
+        print("Invalid operation")
+except ValueError:
+    print("Please enter a number!")
