@@ -21,7 +21,17 @@ while True:
                 print(i, task)
 
     elif choice == "3":
-        number = input("What number do you want delete?: ")
+        try:
+            if len(to_do) == 0:
+                print("You dont have any tasks to delete")
+            elif len(to_do) > 0:
+                number = int(input("What number do you want delete?: "))
+                if 1 <= number <= len(to_do):
+                    to_do.pop(number-1)
+                else:
+                    print("Wrong number")
+        except ValueError:
+            print("Please enter a number!")
 
     elif choice == "4":
         break
