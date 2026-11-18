@@ -1,6 +1,8 @@
 to_do = []
 
 while True:
+    print()
+    print("-" * 20)
     print("1 - Add ")
     print("2 - Show ")
     print("3 - Delete ")
@@ -27,7 +29,8 @@ while True:
             elif len(to_do) > 0:
                 number = int(input("What number do you want delete?: "))
                 if 1 <= number <= len(to_do):
-                    to_do.pop(number-1)
+                    removed = to_do.pop(number - 1)
+                    print(f"Deleted:{removed}")
                 else:
                     print("Wrong number")
         except ValueError:
