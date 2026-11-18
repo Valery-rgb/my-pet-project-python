@@ -5,8 +5,9 @@ while True:
     print("-" * 20)
     print("1 - Add ")
     print("2 - Show ")
-    print("3 - Delete ")
-    print("4 - Exit from menu ")
+    print("3- Mark as done")
+    print("4 - Delete ")
+    print("5 - Exit from menu ")
 
     choice = input("Please choose a number: ")
 
@@ -21,8 +22,18 @@ while True:
         elif len(to_do) > 0:
             for i, task in enumerate(to_do, start=1):
                 print(i, task)
-
     elif choice == "3":
+        try:
+            if len(to_do) == 0:
+                print("You dont have any tasks for today")
+            elif len(to_do) > 0:
+                num = int(
+                    input("What number of task you want to mark as a done?: "))
+                to_do[-1] = " ✅" + to_do[-1]
+                print(to_do)
+        except ValueError:
+            print("Please enter a number!")
+    elif choice == "4":
         try:
             if len(to_do) == 0:
                 print("You dont have any tasks to delete")
@@ -36,7 +47,7 @@ while True:
         except ValueError:
             print("Please enter a number!")
 
-    elif choice == "4":
+    elif choice == "5":
         break
     else:
         print("Wrong choice")
