@@ -14,9 +14,14 @@ while True:
         print(f"Added: {task}")
 
     elif choice == "2":
-        print("Show ")
+        if len(to_do) == 0:
+            print("No tasks yet")
+        elif len(to_do) > 0:
+            for i, task in enumerate(to_do, start=1):
+                print(i, task)
+
     elif choice == "3":
-        print("Delete ")
+        print(delete)
     elif choice == "4":
         break
     else:
