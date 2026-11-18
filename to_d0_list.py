@@ -9,7 +9,10 @@ while True:
     choice = input("Please choose a number: ")
 
     if choice == "1":
-        print("To do: ")
+        task = input("Enter a task: ")
+        to_do.append(task)
+        print(f"Added: {task}")
+
     elif choice == "2":
         print("Show ")
     elif choice == "3":
