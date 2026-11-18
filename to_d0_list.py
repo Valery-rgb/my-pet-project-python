@@ -21,7 +21,8 @@ while True:
                 print(i, task)
 
     elif choice == "3":
-        print(delete)
+        number = input("What number do you want delete?: ")
+
     elif choice == "4":
         break
     else:
